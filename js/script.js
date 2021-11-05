@@ -15,23 +15,24 @@ let napoli = 300;
 let roma = 400;
 let firenze = 500;
 let catania = 600;
-let Catanzaro = 700;
-let Bologna = 600;
-
-
-
-let km = 1;
- 
-let prezzobiglietto = (0,21 * km);
-console.log(prezzobiglietto);
-
-let minorenne = (prezzobiglietto * 20 / 100 );
-console.log(minorenne);
-
-let over65 = (prezzobiglietto * 40 / 100);
-console.log(over65);
+let catanzaro = 700;
+let bologna = 600;
 
 const età = prompt('Quanti anni hai?');
+if (età < 18) {
+  let minorenne = (prezzobiglietto * 20 / 100 );
+  console.log(minorenne);
+
+}
+
+if (età > 65) {
+  let minorenne = (prezzobiglietto * 40 / 100 );
+  console.log(minorenne);
+
+}
+
+
+
 
 document.getElementById ('prezzo').innerHTML = ('il prezzo del biglietto è :'(prezzofinale))
 
