@@ -6,7 +6,7 @@
 //    per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 // Bonus: effettuate dei controlli sui dati di input.
 
-const regione = prompt('Dove vai con il treno?');
+const regione = prompt('Dove vai ?');
 
 document.getElementById ('regione').innerHTML = (regione);
 
@@ -31,7 +31,7 @@ console.log(minorenne);
 let over65 = (prezzobiglietto * 40 / 100);
 console.log(over65);
 
-
+const età = prompt('Quanti anni hai?');
 
 document.getElementById ('prezzo').innerHTML = ('il prezzo del biglietto è :'(prezzofinale))
 
