@@ -18,12 +18,12 @@ document.getElementById ('età').innerHTML = (età);
 
 // dettagli prezzo
 
-if (regione == 'milano') {
+if (regione == 'Milano') {
    km = 200;
   console.log (regione);
 
 }
-else if (regione == 'roma') {
+else if (regione == 'Roma') {
    km = 400;
   console.log (regione);
 }
@@ -34,14 +34,23 @@ console.log (prezzobiglietto);
 minorenne = (prezzobiglietto * 20 / 100 );
 over65 = (prezzobiglietto * 40 / 100 );
 
-let prezzouno = (regione + over65 );
+let prezzouno = (prezzobiglietto + over65 );
 console.log(prezzouno);
-let prezzodue = (regione + minorenne);
+let prezzodue = (prezzobiglietto + minorenne);
 console.log(prezzodue);
 
 
-document.getElementById ('pre-prezzo').innerHTML =('Il prezzo è:');
-document.getElementById ('prezzo').innerHTML = (prezzo);
+document.getElementById ('pre-prezzo').innerHTML =('Il prezzo del biglietto è:');
+if (età < 18) {
+  document.getElementById ('prezzo').innerHTML = (prezzodue);
+}
+else if (età > 65) {
+  document.getElementById ('prezzo').innerHTML = (prezzouno);
+}
+else {
+  document.getElementById ('prezzo').innerHTML = (prezzobiglietto);
+}
+
 
 
 
