@@ -6,33 +6,46 @@
 //    per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 // Bonus: effettuate dei controlli sui dati di input.
 
-const regione = prompt('Dove vai ?');
-
+// richiesta utente regione
+let regione = prompt('Dove stai andando?');
+document.getElementById ('pre-regione').innerHTML =('La tua destinazione è:');
 document.getElementById ('regione').innerHTML = (regione);
-
-let milano = 200;
-let napoli = 300;
-let roma = 400;
-let firenze = 500;
-let catania = 600;
-let catanzaro = 700;
-let bologna = 600;
-
+// richiesta utente età 
 const età = prompt('Quanti anni hai?');
-if (età < 18) {
-  let minorenne = (prezzobiglietto * 20 / 100 );
-  console.log(minorenne);
+document.getElementById ('pre-età').innerHTML =('La tua età è:');
+document.getElementById ('età').innerHTML = (età);
+
+
+// dettagli prezzo
+
+if (regione == 'milano') {
+   km = 200;
+  console.log (regione);
 
 }
-
-if (età > 65) {
-  let minorenne = (prezzobiglietto * 40 / 100 );
-  console.log(minorenne);
-
+else if (regione == 'roma') {
+   km = 400;
+  console.log (regione);
 }
 
+let prezzobiglietto = (0,21 * km);
+console.log (prezzobiglietto);
+
+minorenne = (prezzobiglietto * 20 / 100 );
+over65 = (prezzobiglietto * 40 / 100 );
+
+let prezzouno = (regione + over65 );
+console.log(prezzouno);
+let prezzodue = (regione + minorenne);
+console.log(prezzodue);
+
+
+document.getElementById ('pre-prezzo').innerHTML =('Il prezzo è:');
+document.getElementById ('prezzo').innerHTML = (prezzo);
 
 
 
-document.getElementById ('prezzo').innerHTML = ('il prezzo del biglietto è :'(prezzofinale))
+
+
+
 
