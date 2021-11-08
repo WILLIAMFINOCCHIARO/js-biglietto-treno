@@ -34,18 +34,22 @@ console.log (prezzobiglietto);
 let minorenne = (prezzobiglietto * 20 / 100 );
 let over65 = (prezzobiglietto * 40 / 100 );
 
-
-
+let mino = minorenne.toFixed(2);
+console.log(mino);
+let over = over65.toFixed(2);
+console.log(over);
+let biglietto = prezzobiglietto.toFixed(2);
+console.log(biglietto);
 
 document.getElementById ('pre-prezzo').innerHTML =('Il prezzo del biglietto è:');
 if (età < 18) {
-  document.getElementById ('prezzo').innerHTML = (minorenne + '	&euro;');
+  document.getElementById ('prezzo').innerHTML = (mino + '	&euro;');
 }
 else if (età > 65) {
-  document.getElementById ('prezzo').innerHTML = (over65 + '	&euro;');
+  document.getElementById ('prezzo').innerHTML = (over + '	&euro;');
 }
 else {
-  document.getElementById ('prezzo').innerHTML = (prezzobiglietto + '	&euro;');
+  document.getElementById ('prezzo').innerHTML = (biglietto + '	&euro;');
 }
 
 
