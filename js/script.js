@@ -45,7 +45,7 @@ document.getElementById ('pre-prezzo').innerHTML =('Il prezzo del biglietto è:'
 if (età < 18) {
   document.getElementById ('prezzo').innerHTML = (mino + '	&euro;');
 }
-else if (età > 65) {
+else if (età >= 65) {
   document.getElementById ('prezzo').innerHTML = (over + '	&euro;');
 }
 else {
