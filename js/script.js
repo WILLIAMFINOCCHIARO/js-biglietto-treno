@@ -31,25 +31,26 @@ else if (regione == 'Roma') {
 let prezzobiglietto = (0,21 * km);
 console.log (prezzobiglietto);
 
-minorenne = (prezzobiglietto * 20 / 100 );
-over65 = (prezzobiglietto * 40 / 100 );
+let minorenne = (prezzobiglietto * 20 / 100 );
+let over65 = (prezzobiglietto * 40 / 100 );
 
-let prezzouno = (prezzobiglietto + over65 );
-console.log(prezzouno);
-let prezzodue = (prezzobiglietto + minorenne);
-console.log(prezzodue);
+
 
 
 document.getElementById ('pre-prezzo').innerHTML =('Il prezzo del biglietto è:');
 if (età < 18) {
-  document.getElementById ('prezzo').innerHTML = (prezzodue);
+  document.getElementById ('prezzo').innerHTML = (minorenne + '	&euro;');
 }
 else if (età > 65) {
-  document.getElementById ('prezzo').innerHTML = (prezzouno);
+  document.getElementById ('prezzo').innerHTML = (over65 + '	&euro;');
 }
 else {
-  document.getElementById ('prezzo').innerHTML = (prezzobiglietto);
+  document.getElementById ('prezzo').innerHTML = (prezzobiglietto + '	&euro;');
 }
+
+
+
+
 
 
 
