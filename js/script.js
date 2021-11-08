@@ -7,11 +7,11 @@
 // Bonus: effettuate dei controlli sui dati di input.
 
 // richiesta utente regione
-let regione = prompt('Dove stai andando?');
+let regione = (prompt('Dove stai andando?'));
 document.getElementById ('pre-regione').innerHTML =('La tua destinazione è:');
 document.getElementById ('regione').innerHTML = (regione);
 // richiesta utente età 
-const età = prompt('Quanti anni hai?');
+const età = parseInt(prompt('Quanti anni hai?'));
 document.getElementById ('pre-età').innerHTML =('La tua età è:');
 document.getElementById ('età').innerHTML = (età);
 
@@ -19,16 +19,16 @@ document.getElementById ('età').innerHTML = (età);
 // dettagli prezzo
 
 if (regione == 'Milano') {
-   km = 200;
+   km = 20,5;
   console.log (regione);
 
 }
 else if (regione == 'Roma') {
-   km = 400;
+   km = 40,2;
   console.log (regione);
 }
 
-let prezzobiglietto = (0,21 * km);
+let prezzobiglietto = (0.21 * km);
 console.log (prezzobiglietto);
 
 let minorenne = (prezzobiglietto * 20 / 100 );
